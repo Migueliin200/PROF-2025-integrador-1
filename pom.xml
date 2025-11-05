@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Información del proyecto -->
+  <groupId>es.upm.grise.prof.curso2025</groupId>
+  <artifactId>integrador1</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>PROF-2025-Integrador1</name>
+  <packaging>jar</packaging>
+
+  <!-- Propiedades globales -->
+  <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+  <!-- Dependencias -->
+  <dependencies>
+
+    <!-- JUnit 5 (API + Engine Jupiter) -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.2</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Mockito para mocks -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>5.12.0</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <!-- Configuración de compilación -->
+<build>
+  <!-- Tu código de producción está bajo src/es/... -->
+  <sourceDirectory>src</sourceDirectory>
+  <!-- Los tests están en la ubicación estándar -->
+  <testSourceDirectory>src/test/java</testSourceDirectory>
+
+  <plugins>
+    <!-- Compilador de Java 21 y excluimos la carpeta de tests del código principal -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.11.0</version>
+      <configuration>
+        <release>21</release>
+        <excludes>
+          <!-- Evita que Maven intente compilar src/test/java como código principal -->
+          <exclude>test/**</exclude>
+        </excludes>
+      </configuration>
+    </plugin>
+
+    <!-- Ejecuta JUnit 5 -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.2.5</version>
+      <configuration>
+        <useModulePath>false</useModulePath>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+
+
+</project>
