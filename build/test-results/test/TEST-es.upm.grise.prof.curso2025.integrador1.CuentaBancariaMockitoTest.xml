@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-11-05T17:48:24.450Z" hostname="UPM00826" time="1.565">
+  <properties/>
+  <testcase name="addOperacion(null) → OperacionNulaException" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" time="0.029"/>
+  <testcase name="addOperacion: no permite dos operaciones con el mismo ID" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" time="1.508"/>
+  <testcase name="addOperacion válida se añade a la lista" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" time="0.003"/>
+  <testcase name="getSaldoActual: suma importes y redondea a 2 decimales" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" time="0.005"/>
+  <testcase name="Sin operaciones, el saldo actual es el saldo inicial (redondeado)" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" time="0.001"/>
+  <testcase name="Constructor: la lista de operaciones se inicializa vacía" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" time="0.002"/>
+  <testcase name="getSaldoActual: si admite descubierto, permite saldo negativo" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" time="0.002"/>
+  <testcase name="getSaldoActual: si no admite descubierto y queda negativo → SaldoNegativoException" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaMockitoTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\UPM\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.15\b4cc9d88d5de562bf75b3a54ab436ad01b3f72d\byte-buddy-agent-1.14.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
