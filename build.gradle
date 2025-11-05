@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+}
+
+group = 'es.upm.grise.prof.curso2025'
+version = '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5 (API + Engine)
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+
+    // Gradle 9 requiere el launcher explícito
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.2'
+
+    // Mockito
+    testImplementation 'org.mockito:mockito-core:5.12.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+/* Tu estructura personalizada */
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/es']      // código principal en src/es/...
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test/java'] // tests en src/test/java/...
+        }
+    }
+}
