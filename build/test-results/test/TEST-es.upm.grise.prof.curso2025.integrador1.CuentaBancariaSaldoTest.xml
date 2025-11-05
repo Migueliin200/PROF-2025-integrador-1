@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaSaldoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-05T17:48:26.021Z" hostname="UPM00826" time="0.003">
+<testsuite name="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaSaldoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-05T17:52:45.772Z" hostname="UPM00826" time="0.003">
   <properties/>
   <testcase name="getSaldoActual_devuelve_saldo_correcto()" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaSaldoTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>

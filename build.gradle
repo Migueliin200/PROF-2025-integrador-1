@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'jacoco' // <-- añade JaCoCo
 }
 
 group = 'es.upm.grise.prof.curso2025'
@@ -18,28 +19,65 @@ repositories {
 dependencies {
     // JUnit 5 (API + Engine)
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
-
-    // Gradle 9 requiere el launcher explícito
+    // Gradle 9: launcher explícito
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.2'
-
     // Mockito
     testImplementation 'org.mockito:mockito-core:5.12.0'
 }
 
 test {
     useJUnitPlatform()
+    finalizedBy jacocoTestReport     // genera informe tras los tests
 }
 
-/* Tu estructura personalizada */
+jacoco {
+    // toolVersion opcional; Gradle usa una por defecto. Puedes fijarla si quieres:
+    // toolVersion = '0.8.12'
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true
+        csv.required = false
+        html.required = true
+        // html.outputLocation = layout.buildDirectory.dir('reports/jacoco/test/html') // opcional
+    }
+}
+
+/*
+ * Requisito del enunciado: FAIL del build si no hay 100% de branch coverage
+ * a nivel de MÉTODO.
+ */
+jacocoTestCoverageVerification {
+    dependsOn test
+    violationRules {
+        rule {
+            element = 'METHOD'            // nivel método
+            limit {
+                counter = 'BRANCH'        // cobertura por ramas
+                value   = 'COVEREDRATIO'
+                minimum = 1.0             // 100%
+            }
+        }
+    }
+}
+
+// Para que `gradlew build` falle si no se alcanza el umbral
+check.dependsOn jacocoTestCoverageVerification
+
+/*
+ * Tu estructura personalizada (código en src/es, tests en src/test/java)
+ */
 sourceSets {
     main {
         java {
-            srcDirs = ['src/es']      // código principal en src/es/...
+            srcDirs = ['src/es']
         }
     }
     test {
         java {
-            srcDirs = ['src/test/java'] // tests en src/test/java/...
+            srcDirs = ['src/test/java']
         }
     }
 }

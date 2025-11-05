@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-11-05T17:48:26.027Z" hostname="UPM00826" time="0.051">
+<testsuite name="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-11-05T17:52:45.779Z" hostname="UPM00826" time="0.025">
   <properties/>
   <testcase name="addOperacion(null) lanza OperacionNulaException" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.001"/>
-  <testcase name="No se permite añadir dos operaciones con el mismo ID" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.003"/>
-  <testcase name="addOperacion válida se añade a la lista" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.002"/>
-  <testcase name="getSaldoActual suma importes y redondea a 2 decimales" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.014"/>
-  <testcase name="Sin operaciones, el saldo actual es el saldo inicial redondeado" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.002"/>
-  <testcase name="El constructor deja la lista de operaciones vacía" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.002"/>
-  <testcase name="Si admite descubierto, el saldo negativo es válido" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.002"/>
-  <testcase name="Si no admite descubierto y el saldo queda negativo, lanza SaldoNegativoException" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.003"/>
+  <testcase name="No se permite añadir dos operaciones con el mismo ID" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.002"/>
+  <testcase name="addOperacion válida se añade a la lista" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.001"/>
+  <testcase name="getSaldoActual suma importes y redondea a 2 decimales" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.003"/>
+  <testcase name="Sin operaciones, el saldo actual es el saldo inicial redondeado" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.0"/>
+  <testcase name="El constructor deja la lista de operaciones vacía" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.001"/>
+  <testcase name="Si admite descubierto, el saldo negativo es válido" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.001"/>
+  <testcase name="Si no admite descubierto y el saldo queda negativo, lanza SaldoNegativoException" classname="es.upm.grise.prof.curso2025.integrador1.CuentaBancariaTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
